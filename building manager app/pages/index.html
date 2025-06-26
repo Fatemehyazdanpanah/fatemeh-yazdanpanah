@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units - Building Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide/dist/lucide.js"></script>
+    <link rel="stylesheet" href="../assets/css/base.css">
+</head>
+<body class="flex min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 text-slate-700">
+    <header class="bg-slate-900 text-white p-10 flex flex-col shadow-2xl fixed h-full top-0 left-0 rounded-r-3xl z-10 w-64">
+        <nav class="flex flex-col h-full">
+            <div class="logo text-4xl font-extrabold mb-14 text-purple-400 text-center tracking-wider drop-shadow-lg">Building Manager</div>
+            <ul class="flex flex-col gap-4 flex-grow">
+                <li>
+                    <a href="index.html" class="flex items-center gap-5 p-4 rounded-xl font-semibold transition-all duration-300 ease-in-out text-slate-300 relative overflow-hidden group active:bg-violet-600 active:text-white active:shadow-lg active:shadow-violet-600/60 active:scale-105 active:border-2 active:border-purple-300">
+                        <span class="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0 -z-10"></span>
+                        <i data-lucide="home" class="w-6 h-6 stroke-2.5"></i> Units
+                    </a>
+                </li>
+                <li>
+                    <a href="maintenance.html" class="flex items-center gap-5 p-4 rounded-xl font-semibold transition-all duration-300 ease-in-out text-slate-300 relative overflow-hidden group hover:bg-slate-700 hover:text-white hover:scale-105 hover:shadow-lg">
+                        <span class="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0 -z-10"></span>
+                        <i data-lucide="wrench" class="w-6 h-6 stroke-2.5"></i> Maintenance
+                    </a>
+                </li>
+                <li>
+                    <a href="families.html" class="flex items-center gap-5 p-4 rounded-xl font-semibold transition-all duration-300 ease-in-out text-slate-300 relative overflow-hidden group hover:bg-slate-700 hover:text-white hover:scale-105 hover:shadow-lg">
+                        <span class="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0 -z-10"></span>
+                        <i data-lucide="users" class="w-6 h-6 stroke-2.5"></i> Families
+                    </a>
+                </li>
+                <li>
+                    <a href="expenses.html" class="flex items-center gap-5 p-4 rounded-xl font-semibold transition-all duration-300 ease-in-out text-slate-300 relative overflow-hidden group hover:bg-slate-700 hover:text-white hover:scale-105 hover:shadow-lg">
+                        <span class="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0 -z-10"></span>
+                        <i data-lucide="dollar-sign" class="w-6 h-6 stroke-2.5"></i> Expenses
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-content" class="ml-64 flex-grow p-16 z-0">
+        <main class="max-w-7xl mx-auto bg-white p-14 rounded-3xl shadow-2xl border border-blue-200">
+            <h1 class="text-5xl font-extrabold mb-12 text-violet-800 flex items-center gap-3 pb-3 border-b-4 border-purple-100 drop-shadow-sm">
+                <i data-lucide="building" class="w-10 h-10 stroke-2 text-purple-500"></i> Units Overview
+            </h1>
+            <ul id="units-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="1">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="1">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 1</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="2">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="2">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 2</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="3">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="3">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 3</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="4">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="4">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 4</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="5">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="5">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 5</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="6">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="6">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 6</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="7">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="7">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 7</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="8">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="8">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 8</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="9">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="9">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 9</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="10">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="10">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 10</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="11">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="11">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 11</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="12">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="12">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 12</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="13">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="13">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 13</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+                <li class="unit-card flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out border-4 border-blue-100 hover:border-violet-300 hover:shadow-2xl hover:scale-[1.02] text-slate-700" data-unit-number="14">
+                    <div class="relative w-full text-center">
+                        <i data-lucide="home" class="w-16 h-16 text-purple-500 mb-6 drop-shadow-md"></i>
+                        <div class="absolute top-0 right-0 -mr-2 -mt-2">
+                            <button class="toggle-status-btn p-3 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-violet-200 transition-colors" data-unit-number="14">
+                                <span class="icon-container flex items-center justify-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-violet-800 mt-4 mb-3 drop-shadow-sm">Unit 14</h2>
+                    <div class="text-lg font-semibold flex items-center gap-2">
+                        Status: <span class="unit-status text-lg font-bold"></span>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <script src="../assets/js/base.js"></script>
+</body>
+</html>
